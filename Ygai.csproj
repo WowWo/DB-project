@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7429D2ED-A277-4A2D-82C1-260440CA8A0B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Ygai</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="FormDeleteTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ygai\FormDBconnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ygai\FormAddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="FormDeleteTable.resx">
+      <DependentUpon>FormDeleteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ygai\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ygai\FormGai.resx">
+      <DependentUpon>FormGai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ygai\FormGaiAdd.resx">
+      <DependentUpon>FormGaiAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ygai\FormGaiChange.resx">
+      <DependentUpon>FormGaiChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ygai\FormGaiSearch.resx">
+      <DependentUpon>FormGaiSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ygai\FormDBconnect.resx">
+      <DependentUpon>FormDBconnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ygai\FormAddTable.resx">
+      <DependentUpon>FormAddTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <Reference Include="itextsharp">
+      <HintPath>packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="MySql.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Compile Include="Ygai\Properties\Settings.cs" />
+    <Compile Include="Ygai\Properties\Resources.cs" />
+    <Compile Include="Ygai\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ygai\program.cs" />
+    <Compile Include="Ygai\DBConnect.cs" />
+    <Compile Include="Ygai\FormGai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ygai\FormGaiAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ygai\FormGaiChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ygai\FormGaiSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
